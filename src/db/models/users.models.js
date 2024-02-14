@@ -8,8 +8,15 @@ class User extends Model {
       sequelize,
       tableName: USER_TABLE,
       modelName: "User",
-      timestamps: true,
+      timestamps: false,
     };
+  }
+
+  static associate(models) {
+    this.belongsTo(models.Rol, {
+      foreignKey: 'rolId',
+      as: 'rol',
+    });
   }
 }
 
@@ -29,6 +36,16 @@ const UserSchema = {
     type: DataTypes.STRING,
     allowNull: false,
     field: 'password'
+  },
+  rolId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'rol',
+      key: 'id',
+    },
+    onUpdate: 'CASCADE',
+    onDelete: 'RESTRICT',
   },
 };
 
