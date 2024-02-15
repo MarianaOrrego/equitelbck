@@ -28,6 +28,19 @@ class ProductsServices {
     return res;
   }
 
+  async sell(productId, quantity) {
+    const product = await this.findOne(productId);
+
+    if (product.quantity < quantity) {
+      throw new Error("Not enough stock available");
+    }
+    
+    product.quantity -= quantity;
+    await product.save();
+    return product;
+  }
+  
+
 }
 
 module.exports = ProductsServices;

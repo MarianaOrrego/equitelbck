@@ -17,11 +17,11 @@ const login = async (req, res) => {
     } else {
       res
         .status(401)
-        .json({ message: "Nombre de usuario o contraseña incorrectos" });
+        .json({ message: "Username or password incorrect" });
     }
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Error interno del servidor" });
+    res.status(500).json({ message: "Internal Server Error" });
   }
 };
 

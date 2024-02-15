@@ -6,6 +6,7 @@ router
   .get("/", productsController.getProduct)
   .get("/:productId", productsController.getProductById)
   .post("/", productsController.createProduct)
+  .post("/sell/:productId", productsController.sellProduct)
   .put("/:productId", productsController.updateProduct)
   .delete("/:productId", productsController.removeProduct);
 

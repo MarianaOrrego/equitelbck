@@ -14,6 +14,7 @@ The following technologies were used to build the backend API:
 - cors
 - dotenv
 - pg-hstore
+- bcrypt
 
 ## Initial Configuration
 
@@ -55,6 +56,18 @@ npm install
 
     Replace `your_password` with the password you set for the `postgres` user when you installed PostgreSQL.
 
+    This information is used by the API to connect to the database.
+
+    Remember to create the data base with the name `equitel-db` in your local machine.
+
+    Configure TOKEN_SECRET in the .env file
+
+    ```env
+    TOKEN_SECRET=your_secret
+    ```
+    Replace `your_secret` with the secret you want to use to sign the JWT tokens.
+    
+
 5. Run the following command to start the development server:
 
 ```bash
@@ -63,3 +76,22 @@ npm run dev
 
 The development server will start and you can now make requests to the API.
 
+<!-- ## Database Migrations
+
+The database migrations are handled using the Sequelize ORM. To run the migrations, use the following command:
+
+```bash
+npx sequelize db:migrate
+```
+
+This command will create the necessary tables in the database.
+
+## Database Seeders
+
+The database seeders are used to populate the database with initial data. To run the seeders, use the following command:
+
+```bash
+npx sequelize db:seed:all
+```
+
+This command will populate the database with initial data. -->
