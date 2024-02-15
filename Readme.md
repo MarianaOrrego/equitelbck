@@ -75,23 +75,3 @@ npm run dev
 ```
 
 The development server will start and you can now make requests to the API.
-
-<!-- ## Database Migrations
-
-The database migrations are handled using the Sequelize ORM. To run the migrations, use the following command:
-
-```bash
-npx sequelize db:migrate
-```
-
-This command will create the necessary tables in the database.
-
-## Database Seeders
-
-The database seeders are used to populate the database with initial data. To run the seeders, use the following command:
-
-```bash
-npx sequelize db:seed:all
-```
-
-This command will populate the database with initial data. -->

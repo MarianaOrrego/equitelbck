@@ -17,6 +17,11 @@ class Products extends Model {
       foreignKey: 'providerId',
       as: 'productProvider',
     });
+
+    this.belongsTo(models.User, {
+      foreignKey: 'userId',
+      as: 'userAudit',
+    });
   }
 }
 
@@ -53,6 +58,16 @@ const ProductsSchema = {
     references: {
       model: 'provider',
       key: 'providerId',
+    },
+    onUpdate: 'CASCADE',
+    onDelete: 'RESTRICT',
+  },
+  userId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'users',
+      key: 'id',
     },
     onUpdate: 'CASCADE',
     onDelete: 'RESTRICT',
