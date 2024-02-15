@@ -75,3 +75,50 @@ npm run dev
 ```
 
 The development server will start and you can now make requests to the API.
+
+## Routes
+
+Have a look at the `routes` folder to see the available routes.
+
+List of routes:
+- audit.router.js
+- login.router.js
+- products.router.js
+- provider.router.js
+- users.router.js
+- rol.router.js
+
+## Models
+
+Have a look at the `models` folder to see the available models.
+
+List of models:
+- audit.model.js
+- products.model.js
+- provider.model.js
+- users.model.js
+- rol.model.js
+
+
+## Controllers
+
+Have a look at the `controllers` folder to see the available controllers.
+
+List of controllers:
+- audit.controller.js
+- login.controller.js
+- products.controller.js
+- provider.controller.js
+- users.controller.js
+- rol.controller.js
+
+## Services
+
+Have a look at the `services` folder to see the available services.
+
+List of services:
+- audit.service.js
+- products.service.js
+- provider.service.js
+- users.service.js
+- rol.service.js
